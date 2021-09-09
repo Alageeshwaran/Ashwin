@@ -1,0 +1,218 @@
+*{
+    @import url('https://fonts.googleapis.com/css2?family=Allison&family=IBM+Plex+Sans+Arabic:wght@100;500&display=swap');
+    padding: 0;
+    margin: 0;
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container2{
+    position: relative;
+    top:80px;
+    border: 2px solid  gold;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;   
+}
+.nav{
+    background: #0082e6; 
+    position: fixed;   
+    width: 100%;
+    z-index: 1; 
+}
+nav ul{
+    float:right;
+    margin-right: 25px;
+}
+nav ul li{
+    display: inline-block;
+    line-height:80px;
+    margin: 0px 5px;  
+}
+nav ul li ul{
+    line-height: 10px;
+    position: absolute;
+    background: #0082e6;
+    top: 80px;
+    visibility: hidden;
+    border-radius: 5px;
+}
+nav ul li ul li {
+    line-height: 50px;
+    padding: 5px;
+}
+nav ul li:hover ul{
+    visibility: visible; 
+}
+nav ul li a{
+    color: white;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+a.active,a:hover{
+    background: white;
+    color: black;
+    transition: .4s;
+}
+.checkbtn{
+    font-size: 40px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.beds{
+    
+    border-radius: 10px;
+    width: 95%;
+    margin-top:50px;
+}
+.beds1,.clothes1,.toys1,.collars1{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    width: 98%;
+}
+.b1,.b2,.b3,.b4{
+   
+    height: 300px;
+    width: 300px;
+    margin: 25px 0 0 0;
+    border-radius: 5px;
+    position: relative;
+    transition: .4s ease-in;
+  
+    
+}
+.b1:hover,.b2:hover,.b3:hover,.b4:hover{
+   box-shadow:0 0 2px 2px rgb(230, 227, 227);
+    transform: scale(1.03);
+}
+.item-name{
+    position: absolute;
+    font-size: 30px;
+    left: 40%;
+   bottom:100px;
+color:crimson;
+}
+.price{
+    position: absolute;
+    font-size:25px;
+    bottom: 55px;
+    left: 40%;
+    color:green;
+}
+.cart{
+    position: absolute;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 9px;
+    color: white;
+    bottom: 8px;
+    left: 30%;
+    transition: .5s ease;
+ background: #0082e6;
+}
+.cart:hover{
+    background: transparent;
+   color: black;
+}
+.img{
+    margin-top: 10px;
+    background-image: url("bed.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    height: 150px;
+}
+.heading{
+    margin: 15px;
+    font-size: 25px; 
+}
+hr{
+    width: 90%;
+    margin-top: 12px;
+    margin-left: 15px;
+    background-color: #0082e6;
+   height:4px;
+}
+
+.clothes{
+    
+    width: 95%;
+    margin-top:50px;
+    
+}
+.collars{
+    
+    width:95%;
+    margin-top:50px;
+    
+}
+.toys{
+     
+    width: 95%;
+    margin-top:50px;
+    
+}
+@media (max-width:950px) {
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width:50%;
+        height: 100vh;
+        background: lavenderblush;
+        top:60px;
+        left: -100%;
+        transition: .7s ease-out;
+        text-align: center;
+        margin-top: 20px;   
+    }
+    nav ul li a{
+        color: black;
+    }
+    nav ul li{
+        display: block;      
+    }
+    nav ul li ul{
+       left: 100%;
+       width:100%;
+       height: 20%;
+       background: lavenderblush;
+       top: 24%;
+    }
+    nav ul li ul li a{
+        font-size: 13px;
+    }
+    nav ul li:hover ul{
+        visibility: visible; 
+    }
+    a.active,a:hover{
+        background: white;
+        color: #0082e6;
+        padding: 15px;
+    }
+    #check:checked ~ul{
+        left:0;  
+    }
+  
+ }
